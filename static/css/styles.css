@@ -2,6 +2,18 @@ body {
     font-family: 'Ubuntu', sans-serif;
 }
 
+#lower_left {
+	position: absolute;
+	bottom: 0%;
+	left: 0;
+}
+#lower_right {
+	bottom: 0%;
+	right: 0%;
+	position: absolute;
+    transform: scaleX(-1)
+}
+
 .center-template {
   padding: 3rem 1.5rem;
   text-align: center;
