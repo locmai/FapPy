@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %} Submit {% endblock %}
+
+{%  block content %}
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-8 col-sm-8">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">Submit your masturbation info</h3>
+              <form method="post" novalidate>
+                {% csrf_token %}
+                {% include 'includes/form.html' %}
+                <div class="right-template-submit">
+                    <button type="submit" class="btn btn-dark">Submit</button>
+                <button type="button" onclick="location.href='{% url 'home' %}';"
+                        class="btn btn-dark">Cancel</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+    </div>
+{% endblock %}

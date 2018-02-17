@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block title %} FapPy {% endblock %}
+<!-- /.container -->
+{% block content %}
+
+      <div class="center-template">
+        <h1>Be Strong. Control yourself.</h1>
+        <p class="lead">Only you can change your life. No one can do it for you</p>
+          <button type="button" onclick="location.href='{% url 'submit' %}';"
+                  class="btn-mid btn btn-dark">Oops... I just masturbated...</button>
+      </div>
+
+    <div id="info" class="general-info">
+        <p>You have masturbated {{ info.total_m_times }}
+            {% if info.total_m_times <= 1 %}
+                time.
+            {% else %}
+                times.
+            {% endif %}
+        </p>
+        <p>Time since last masturbation:
+            {% if info.total_m_times < 1 %}
+                N/A
+            {% else %}
+                <span id="timer"></span>
+            {% endif %}
+        </p>
+        <p>Total masturbate duration:
+            {{ info.total_duration }}
+        </p>
+        <p>Longest time you can hold:
+            {% if info.total_m_times <= 1 %}
+                N/A
+            {% else %}
+                {{ info.longest_time_before_masturbate }}
+            {% endif %}
+        </p>
+
+    </div>
+
+    <script>
+    var lastDate = new Date("{{ info.last_date.isoformat}}").getTime();
+    setInterval(function() {
+        var now = new Date().getTime();
+        var distance = now - lastDate;
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+    }, 1000);
+    </script>
+
+{% endblock %}
+<!-- /.container -->
