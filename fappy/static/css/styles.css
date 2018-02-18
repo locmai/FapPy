@@ -1,0 +1,60 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#lower_left {
+	position: absolute;
+	bottom: 0%;
+	left: 0;
+}
+#lower_right {
+	bottom: 0%;
+	right: 0%;
+	position: absolute;
+    transform: scaleX(-1)
+}
+
+.center-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.right-template-submit {
+  padding: 10px;
+  text-align: right;
+}
+
+.left-template {
+  padding: 10px;
+  text-align: left;
+}
+
+.btn-mid {
+    padding: 1%;
+    margin: 5%;
+    font-size: xx-large;
+}
+
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.container {
+  max-width: 960px;
+}
+
+.border-top { border-top: 1px solid #e5e5e5; }
+.border-bottom { border-bottom: 1px solid #e5e5e5; }
+
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+.general-info {
+    border-radius: 5px;
+    border: 2px solid black;
+    padding: 10px;
+}
