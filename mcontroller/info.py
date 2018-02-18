@@ -3,8 +3,9 @@ from datetime import timedelta
 
 
 class Info(object):
-    def __init__(self):
-        self.all_m = Masturbation.objects.all()
+    def __init__(self, current_user):
+        self.current_user = current_user
+        self.all_m = Masturbation.objects.filter(m_user=current_user.id)
 
     @property
     def total_m_times(self):

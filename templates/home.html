@@ -3,7 +3,7 @@
 {% block title %} FapPy {% endblock %}
 <!-- /.container -->
 {% block content %}
-
+    {% if user.is_authenticated %}
       <div class="center-template">
         <h1>Be Strong. Control yourself.</h1>
         <p class="lead">Only you can change your life. No one can do it for you</p>
@@ -52,6 +52,11 @@
         + minutes + "m " + seconds + "s ";
     }, 1000);
     </script>
-
+    {% else %}
+        <div class="center-template">
+            <h1>I see ... you came here to find peaceful.</h1>
+            <p class="lead">Let's get started by <a href="{% url 'signup' %}">signing up</a></p>
+        </div>
+    {% endif %}
 {% endblock %}
 <!-- /.container -->

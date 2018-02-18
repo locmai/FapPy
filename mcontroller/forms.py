@@ -2,7 +2,7 @@ from django import forms
 from mcontroller.models import Masturbation
 
 
-class SubmitMasturbationForm(forms.ModelForm):
+class MasturbationForm(forms.ModelForm):
     class Meta:
         model = Masturbation
         fields = ('m_reason', 'm_method', 'm_duration')

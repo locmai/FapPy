@@ -7,18 +7,21 @@
         <div class="col-lg-6 col-md-6 col-sm-6">
           <div class="card">
             <div class="card-body">
-              <h3 class="card-title">Sign up for new account!</h3>
+                {% if user.is_authenticated %}
+                    <h4>You already logged in mate...</h4>
+                    {% else %}
+                    <h3 class="card-title">Log in to your account</h3>
               <form method="post" novalidate>
                 {% csrf_token %}
                 {% include 'includes/form.html' %}
                 <div class="right-template-submit">
                     <button type="submit" class="btn btn-dark">Login</button>
-
                 </div>
                 <div class="left-template">
                     <h5>New to FapPy? <a href="{% url 'signup' %}">Let's sign up</a></h5>
                 </div>
               </form>
+                {% endif %}
             </div>
           </div>
         </div>
