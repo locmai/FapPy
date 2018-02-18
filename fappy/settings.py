@@ -82,10 +82,10 @@ WSGI_APPLICATION = 'fappy.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'controlmdb',
-        'USER': 'postgres',
-        'PASSWORD': 'admin',
-        'HOST': '127.0.0.1',
+        'NAME': 'd7jsoq1cqilqv',
+        'USER': 'vpgqfltecfarvb',
+        'PASSWORD': '566d25d198261838f862c9876f0627bd880a825decf6bb3e194a847fc276b919',
+        'HOST': 'ec2-54-235-90-200.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
