@@ -62,3 +62,9 @@ As a solution, I have used [Pingdom](https://www.pingdom.com) to ping the site e
 ## Issues
 
 https://github.com/locmai/FapPy/issues
+
+## Future works:
+
+* Fix bugs
+* Update from Function Views Generic to Class-Based Views, refactor code.
+* Login with Facebook account
