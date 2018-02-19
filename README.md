@@ -59,5 +59,6 @@ I'm currently hosting the site on [Heroku](https://fappy.herokuapp.com/).
 It might go to sleep after a few minutes for being inactive. 
 As a solution, I have used [Pingdom](https://www.pingdom.com) to ping the site every 15 minutes. Hope it will be okay there.
 
-##Issues
+## Issues
+
 https://github.com/locmai/FapPy/issues
