@@ -10,14 +10,16 @@ A funny idea from my friend and I think it will be helpful to someone.
 * Submit M statuses - **Done**
 * Sign up, log in, log out - **Done**
 * Export data to CSV format - **Done**
-* Full analysis support - **Not started due to LAZINESS**
+* Full analysis support - **Not started**
+* Supervisor and Account management - **Not started**
+
 ### Stack
 I planned to use Django with ReactJS for practicing but then I got lazy and use pure Python with Django.
 * Django 2.0.2
 * Python 3.6
 ### Python packages
 I used the following packages:
-```
+```bash
 pip freeze
 Django==2.0.2
 django-widget-tweaks==1.4.1
@@ -39,10 +41,23 @@ The Profile is prepared for Heroku deployment.
 ### Database configuration:
 
 Edit settings.py in folder *fappy*
-
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'DBNAME',
+        'USER': 'YOURUSERNAME',
+        'PASSWORD': 'YOURPASSWORD',
+        'HOST': 'YOURHOST',
+        'PORT': 'YOURPORT',
+    }
+}
+```
 ## Demo
 I'm currently hosting the site on [Heroku](https://fappy.herokuapp.com/).
 
 It might go to sleep after a few minutes for being inactive. 
 As a solution, I have used [Pingdom](https://www.pingdom.com) to ping the site every 15 minutes. Hope it will be okay there.
 
+##Issues
+https://github.com/locmai/FapPy/issues
